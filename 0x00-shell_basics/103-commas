@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1 --group-directories-first | LC_COLLATE=C grep -v '^.$' | tr '\n' ',' | sed 's/,$/\n/'
+ls -a1v | awk '{ printf "%s%s", $0, (/^[^A-Za-z]/ ? "," : (/^d/ ? "/," : "\n")) }'
