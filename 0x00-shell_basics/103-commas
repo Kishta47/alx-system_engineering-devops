@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -a1v | awk '{ printf "%s%s", $0, (/^[^A-Za-z]/ ? "," : (/^d/ ? "/," : "\n")) }'
+ls -1v --group-directories-first | awk '{ORS=($NF=="/"?",":RS)}1'
