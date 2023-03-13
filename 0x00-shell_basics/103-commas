@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1v --group-directories-first | sed ':a;N;$!ba;s/\n/, /g'
+ls -1v --group-directories-first > temp_file && printf '%s, ' $(cat temp_file) && rm temp_file && echo
