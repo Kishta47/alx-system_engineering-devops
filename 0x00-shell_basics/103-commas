@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1v --group-directories-first > temp_file && printf '%s, ' $(cat temp_file) && rm temp_file && echo
+printf '%s\n' .[0-9a-zA-Z]* | sort -t '/' -k 2,2 -k 1,1 | awk '{print $0 ","}' | tr '\n' ' '; echo
