@@ -1,2 +1,2 @@
 #!/bin/bash
-mkdir -p welcome/{to/school,}
+tr 'A' 'Z' | tr 'c' 'e'

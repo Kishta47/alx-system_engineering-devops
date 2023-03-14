@@ -1,2 +1,2 @@
 #!/bin/bash
-ls -1 -A -v | awk '{printf "%s%s", NR==1 ? "" : ",", $0} END {print ""}' | sed -e 's/^/,/' -e 's#/$#/,/' | tr -d '\n'
+grep -v "bin"/etc/passwd
